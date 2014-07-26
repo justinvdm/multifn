@@ -1,6 +1,7 @@
 (function() {
   function multifn() {
     var types = [];
+    var fallback = noop;
 
     function _multifn_() {
       var i = -1;
@@ -12,6 +13,8 @@
         if (!type.if.apply(this, arguments)) continue;
         return type.do.apply(this, arguments);
       }
+
+      return fallback.apply(this, arguments);
     }
 
     _multifn_.if = function(ifFn) {
@@ -24,9 +27,16 @@
         return _multifn_;
       }};
     };
+    
+    _multifn_.else = function(elseFn) {
+      fallback = elseFn;
+      return _multifn_;
+    };
 
     return _multifn_;
   }
+
+  function noop() {}
 
   if (typeof module != 'undefined')
     module.exports = multifn;

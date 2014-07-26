@@ -28,4 +28,14 @@ describe("multifn", function() {
     assert.equal(fn(true), 23);
     assert(typeof fn(false) == 'undefined');
   });
+
+  it("should allow a fallback function to be given", function() {
+    var fn = multifn()
+      .if(function(a, b) { return a && !b; })
+      .do(function() { return 23; })
+      .else(function(a, b) { return a + b; });
+
+    assert.equal(fn(1), 23);
+    assert.equal(fn(2, 3), 5);
+  });
 });
