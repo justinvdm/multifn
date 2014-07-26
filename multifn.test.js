@@ -38,4 +38,18 @@ describe("multifn", function() {
     assert.equal(fn(1), 23);
     assert.equal(fn(2, 3), 5);
   });
+
+  it("should use the multifn as the context for overrides", function(done) {
+    var fn = multifn()
+      .if(function() {
+        assert.strictEqual(this, fn);
+        return !arguments.length;
+      })
+      .do(function() {
+        assert.strictEqual(this, fn);
+        done();
+      });
+
+    fn();
+  });
 });

@@ -10,11 +10,11 @@
 
       while (++i < n) {
         type = types[i];
-        if (!type.if.apply(this, arguments)) continue;
-        return type.do.apply(this, arguments);
+        if (!type.if.apply(_multifn_, arguments)) continue;
+        return type.do.apply(_multifn_, arguments);
       }
 
-      return fallback.apply(this, arguments);
+      return fallback.apply(_multifn_, arguments);
     }
 
     _multifn_.if = function(ifFn) {
