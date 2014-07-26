@@ -1,7 +1,7 @@
 {
   "name": "multifn",
   "version": "0.0.0",
-  "description": "define functions with multiple overrides",
+  "description": "create functions with multiple overrides",
   "main": "multifn.js",
   "scripts": {
     "test": "mocha -R spec multifn.test.js"

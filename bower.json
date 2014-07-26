@@ -6,7 +6,7 @@
   "authors": [
     "justinvdm <justinvdm.0.1.0@gmail.com>"
   ],
-  "description": "define functions with multiple overrides",
+  "description": "create functions with multiple overrides",
   "keywords": [
     "multi",
     "overrides"
