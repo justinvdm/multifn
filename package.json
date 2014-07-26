@@ -1,0 +1,26 @@
+{
+  "name": "multifn",
+  "version": "0.0.0",
+  "description": "define functions with multiple overrides",
+  "main": "multifn.js",
+  "scripts": {
+    "test": "mocha -R spec multifn.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justinvdm/multifn.git"
+  },
+  "keywords": [
+    "multi",
+    "overrides"
+  ],
+  "author": "justinvdm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinvdm/multifn/issues"
+  },
+  "homepage": "https://github.com/justinvdm/multifn",
+  "devDependencies": {
+    "mocha": "^1.19.0"
+  }
+}
