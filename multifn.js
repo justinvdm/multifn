@@ -44,4 +44,4 @@
     define(function() { return multifn; });
   else
     this.multifn = multifn;
-})();
+}).call(this);
