@@ -1,6 +1,6 @@
 {
   "name": "multifn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "create functions with multiple overrides",
   "main": "multifn.js",
   "scripts": {
